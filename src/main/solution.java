@@ -1,17 +1,17 @@
-package src;
+package src.main;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
-class solution {
+public class solution {
 
-    // public void solveSudoku(char[][] board) {
-    public static void solveSudoku() {
-        String[][] board = { { "5", "3", ".", ".", "7", ".", ".", ".", "." },
-                { "6", ".", ".", "1", "9", "5", ".", ".", "." }, { ".", "9", "8", ".", ".", ".", ".", "6", "." },
-                { "8", ".", ".", ".", "6", ".", ".", ".", "3" }, { "4", ".", ".", "8", ".", "3", ".", ".", "1" },
-                { "7", ".", ".", ".", "2", ".", ".", ".", "6" }, { ".", "6", ".", ".", ".", ".", "2", "8", "." },
-                { ".", ".", ".", "4", "1", "9", ".", ".", "5" }, { ".", ".", ".", ".", "8", ".", ".", "7", "9" } };
+    /**
+     * Takes in an unsolved sudoku board and return a solved board
+     * @param board Uncompleted sudoku board
+     * @return board Completed sudoku board
+     */
+    public String[][] solveSudoku(String[][] board) {
+        
         Set<String> box1 = new HashSet<String>();
         box1.add("1");
         box1.add("2");
@@ -411,11 +411,12 @@ class solution {
         System.out.println();
         }
 
+        return board;
+
     }
 
     /**
      * Check to see if a board value is a valid sudoku value
-     * 
      * @param str String of board value
      * @return boolean if str is a 0-9 value
      */
@@ -427,6 +428,6 @@ class solution {
     }
 
     public static void main(String[] args) {
-        solveSudoku();
+        //solveSudoku();
     }
 }
